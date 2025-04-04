@@ -1,0 +1,32 @@
+{
+  "name": "gpt-top-5-results",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "exports": {
+    "require": "./dist/index.js",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && microbundle --tsconfig tsconfig.json --no-sourcemap",
+    "dev": "microbundle --watch --tsconfig tsconfig.json --no-sourcemap"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^4.0.2",
+    "microbundle": "^0.15.1",
+    "openai": "^4.91.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0"
+  },
+  "module": "dist/index.m.js",
+  "unpkg": "dist/index.umd.js"
+}
