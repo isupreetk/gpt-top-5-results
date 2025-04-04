@@ -6,7 +6,7 @@ export class Results {
 async getSearchResults(searchQuery: string): Promise<string[]> {
 
   console.log("apiKey", process.env.OPENAI_KEY);
-  
+
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_KEY,
   });
@@ -29,3 +29,4 @@ const gptQuery =
   }
 }
   
+export default Results;
