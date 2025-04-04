@@ -22,7 +22,7 @@ async getSearchResults(searchQuery: string): Promise<string[]> {
   });
 
 const gptQuery =
-      "Act as a Movie Recommendation System and suggest some movies for the query " + searchQuery
+      "Act as a Movie Recommendation System and suggest some movies for the query " + searchQuery +
       ". Only give me comma separated names of 5 movies like the example result given ahead. Example Result: Venom, Moana 2, Despicable Me 2, Drishyam";
 
       console.log("gptQuery", gptQuery);
