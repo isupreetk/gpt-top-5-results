@@ -11,9 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/isupreetk/gpt-top-5-results.git"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "license": "ISC",
   "author": "isupreetk",
   "type": "commonjs",
@@ -37,6 +34,9 @@
   },
   "devDependencies": {
     "@types/node": "^22.14.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "module": "dist/index.m.js",
   "unpkg": "dist/index.umd.js"
