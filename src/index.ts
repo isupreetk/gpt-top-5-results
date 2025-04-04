@@ -28,5 +28,9 @@ const gptQuery =
     return gptMoviesList;
   }
 }
+
+interface Results {
+  getSearchResults(searchQuery: string): Promise<string[]> 
+};
   
 export default Results;
