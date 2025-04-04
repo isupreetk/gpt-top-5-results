@@ -1,7 +1,7 @@
 
 import OpenAI from "openai";
 
-export class Results {
+class Results {
 
 async getSearchResults(searchQuery: string): Promise<string[]> {
 
