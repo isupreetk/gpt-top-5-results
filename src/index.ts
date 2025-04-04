@@ -3,12 +3,22 @@ import OpenAI from "openai";
 
 class Results {
 
+  apiKeyBase:string;
+
+  constructor(apiKeyBase: string) {
+    console.log("apiKey received", apiKeyBase);
+
+    this.apiKeyBase = apiKeyBase;
+    console.log("apiKey set", this.apiKeyBase);
+
+  }
+
 async getSearchResults(searchQuery: string): Promise<string[]> {
 
-  console.log("apiKey", process.env.OPENAI_KEY);
+  console.log("apiKey", this.apiKeyBase);
 
   const openai = new OpenAI({
-    apiKey: process.env.OPENAI_KEY,
+    apiKey: this.apiKeyBase,
   });
 
 const gptQuery =
@@ -28,9 +38,5 @@ const gptQuery =
     return gptMoviesList;
   }
 }
-
-interface Results {
-  getSearchResults(searchQuery: string): Promise<string[]> 
-};
   
 export default Results;
